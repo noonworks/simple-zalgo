@@ -13,7 +13,7 @@
 <script>
 function zalgo(evt) {
   var src = document.getElementById('input').value;
-  var result = src.replace(/([a-zA-Z])/g, function(match, p1) {
+  var result = src.replace(/([a-zA-Z\(\)\., ･])/g, function(match, p1) {
     var cnt = Math.floor(Math.random() * 30);
     for (var i = 1; i <= cnt; i++) {
       p1 += String.fromCharCode(0x300 + Math.floor(Math.random()*79));
